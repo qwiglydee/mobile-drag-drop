@@ -95,7 +95,8 @@ function createDragEventFromTouch( targetElement:Element,
 
     const dndEvent:DragEvent = new Event( type, {
         bubbles: true,
-        cancelable: cancelable
+        cancelable: cancelable,
+        composed: true
     } ) as DragEvent;
 
     // cast our polyfill
