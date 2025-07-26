@@ -315,7 +315,8 @@ function createDragEventFromTouch(targetElement, e, type, cancelable, window, da
     var touch = e.changedTouches[0];
     var dndEvent = new Event(type, {
         bubbles: true,
-        cancelable: cancelable
+        cancelable: cancelable,
+        composed: true
     });
     dndEvent.dataTransfer = dataTransfer;
     dndEvent.relatedTarget = relatedTarget;
